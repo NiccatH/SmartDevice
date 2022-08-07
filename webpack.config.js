@@ -12,7 +12,7 @@ module.exports = {
     main: './js/main.js',
     vendor: './js/vendor.js',
   },
-  devtool: isDev ? 'source-map' : false,
+  devtool: false,
   output: {
     filename: '[name].min.js',
     path: path.resolve(__dirname, 'build/js'),

@@ -13,13 +13,25 @@
 @import "global/fonts";
 @import "global/reboot";
 @import "global/utils";
-@import "global/container";
 
 // Blocks
 // ---------------------------------
 
 @import "blocks/btn";
-@import "blocks/modal";
+@import "blocks/logo.scss";
+@import "blocks/page-header.scss";
+@import "blocks/contacts.scss";
+@import "blocks/social.scss";
+@import "blocks/page.scss";
+@import "blocks/page-footer.scss";
+@import "blocks/section-wrapper";
+@import "blocks/main-block.scss";
+@import "blocks/advantages.scss";
+@import "blocks/about.scss";
+@import "blocks/catalog.scss";
+@import "blocks/feedback.scss";
+@import "blocks/form.scss";
+@import "blocks/modal-container.scss";
 
 // ---------------------------------
 

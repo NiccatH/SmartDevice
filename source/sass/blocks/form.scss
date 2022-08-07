@@ -1,0 +1,218 @@
+.form {
+  color: $color-default-white;
+}
+
+.form h2 {
+  margin-top: 0;
+  font-family: $ff-roboto-condensed;
+  font-weight: 400;
+}
+
+.form p {
+  margin-top: 0;
+}
+
+.form__default-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(200px, 1fr));
+  column-gap: 30px;
+  row-gap: 20px;
+  color: $color-default-white;
+
+  @include max-mobile {
+    gap: unset;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.form__modal-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.form__field {
+  @include max-mobile {
+    margin-bottom: 20px;
+  }
+}
+
+.form__field-modal {
+  margin-bottom: 20px;
+}
+
+.form__textarea {
+  grid-column: 1 / -1;
+  margin-bottom: 9px;
+
+  @include max-mobile {
+    margin-bottom: 23px;
+  }
+}
+
+.form__textarea-modal {
+  margin-bottom: 18px;
+}
+
+.form__field input {
+  padding: 15px 15px 17px 15px;
+}
+
+.form__textarea textarea {
+  min-height: 155px;
+  padding: 22.5px 15px;
+
+  @include max-tablet {
+    padding: 29.5px 15px;
+  }
+
+  @include max-mobile {
+    min-height: 180px;
+    padding: 22.5px 15px;
+  }
+}
+
+.form input,
+.form textarea {
+  width: 100%;
+  background-color: $bg-black-pearl-opacity;
+  color: $color-default-white;
+  border: none;
+  border-radius: 3px;
+
+  &::placeholder {
+    font-family: $ff-pt-mono;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: $color-default-white;
+  }
+
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover {
+      box-shadow: inset 0 0 0 2px $color-default-white;
+    }
+  }
+}
+
+.form__check {
+  align-self: flex-end;
+  padding-left: 10px;
+
+  @include max-tablet {
+    padding-left: 0;
+    margin-bottom: 5px;
+  }
+
+  @include max-mobile {
+    padding-left: 5px;
+    margin-bottom: 0;
+  }
+}
+
+.form__check-modal {
+  align-self: stretch;
+  padding-left: 8px;
+}
+
+.form__check label {
+  display: grid;
+  grid-template-columns: 15px 1fr;
+  column-gap: 12px;
+  align-items: center;
+  cursor: pointer;
+
+  @include max-tablet {
+    column-gap: 10px;
+  }
+
+  &:focus-within > span:first-of-type {
+    box-shadow: inset 0 0 0 1px $color-black-pearl;
+  }
+}
+
+.form__check-modal label {
+  column-gap: 10px;
+}
+
+.form__check input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+  pointer-events: none;
+
+  &:checked + span::after {
+    content: url("../img/svg/approve-icon.svg");
+    position: absolute;
+    display: block;
+    left: 2.1px;
+    top: 37%;
+    transform: translateY(-50%);
+  }
+}
+
+.form__check span {
+  &:first-of-type {
+    position: relative;
+    width: 15px;
+    height: 15px;
+    background-color: transparent;
+    border-radius: 2px;
+    box-shadow: inset 0 0 0 1px $color-default-white;
+
+    @include max-mobile {
+      height: 14px;
+    }
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover {
+        box-shadow: inset 0 0 0 1px $color-black-pearl;
+      }
+    }
+  }
+
+  &:last-of-type {
+    display: block;
+    font-size: 14px;
+    line-height: 16px;
+    color: $color-default-white;
+    opacity: 0.8;
+    transform: translateY(2px);
+  }
+}
+
+.form__button {
+  min-width: 200px;
+  max-width: 265px;
+  font-size: 16px;
+  line-height: 19px;
+  padding: 15px 25px 11px 25px;
+  color: $color-default-white;
+  background-color: $color-black-pearl;
+
+  @include max-mobile {
+    max-width: 100%;
+    width: 100%;
+    margin-bottom: 23.5px;
+  }
+
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover {
+      color: $color-black-pearl;
+      background-color: $color-default-white;
+    }
+  }
+}
+
+.form__button-modal {
+  width: 100%;
+  margin-bottom: 18px;
+}

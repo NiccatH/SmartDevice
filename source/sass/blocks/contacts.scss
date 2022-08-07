@@ -1,0 +1,50 @@
+.contacts {
+  display: grid;
+  grid-template-columns: repeat(2, 225px);
+  gap: 27.5px;
+  list-style-type: none;
+
+  @include max-tablet {
+    grid-template-columns: repeat(auto-fit, minmax(40px, 40px));
+    gap: 20px;
+  }
+}
+
+.contacts__link {
+  display: flex;
+  align-items: center;
+  color: $color-alice-blue;
+
+  @include max-tablet {
+    padding: 10px;
+  }
+
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover {
+      color: $color-deep-sky-blue;
+    }
+
+    &:hover > svg {
+      fill: $color-alice-blue;
+    }
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+}
+
+.contacts__icon {
+  margin-right: 15px;
+  fill: $color-deep-sky-blue;
+
+  @include max-tablet {
+    margin-right: 0;
+  }
+}
+
+.contacts__text {
+  @include max-tablet {
+    display: none;
+  }
+}

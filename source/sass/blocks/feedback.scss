@@ -1,0 +1,69 @@
+.feedback {
+  position: relative;
+  background: 0 -79px / auto no-repeat url("../../img/svg/form-decor.svg"), $color-deep-sky-blue;
+
+  @include max-tablet {
+    background-image: none;
+  }
+}
+
+.feedback__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 50px;
+  padding: 167px 10px 250px 0;
+
+  @include max-desktop {
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+
+  @include max-tablet {
+    display: block;
+    padding-top: 45px;
+    padding-bottom: 125px;
+  }
+
+  @include max-mobile {
+    padding: 47px 25px 90px 25px;
+  }
+}
+
+.feedback__form h2 {
+  margin-bottom: 10px;
+  font-size: 36px;
+  line-height: 51px;
+  transform: translateX(-5px);
+
+  @include max-tablet {
+    margin-bottom: 7px;
+    transform: none;
+  }
+
+  @include max-mobile {
+    font-size: 30px;
+    line-height: 42px;
+  }
+}
+
+.feedback__form p {
+  margin-bottom: 35px;
+
+  @include max-tablet {
+    margin-bottom: 25px;
+  }
+
+  @include max-mobile {
+    margin-bottom: 34px;
+    font-size: 14px;
+    line-height: 19px;
+  }
+}
+
+.feedback img {
+  margin-top: 79px;
+
+  @include max-tablet {
+    display: none;
+  }
+}

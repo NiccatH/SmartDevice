@@ -1,0 +1,194 @@
+.advantages__wrapper {
+  padding: 120px 0 60px 0;
+
+  @include max-desktop {
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+
+  @include max-tablet {
+    padding-top: 79px;
+    padding-bottom: 40px;
+  }
+
+  @include max-mobile {
+    padding: 50px 25px 26px 25px;
+  }
+}
+
+.advantages ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+
+  @include max-mobile {
+    gap: unset;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+.advantages li {
+  position: relative;
+  min-height: 300px;
+  padding: 40px 44px 40px 45px;
+  box-shadow: inset 0 0 0 1px $color-whisper;
+
+  @include max-tablet {
+    min-height: 360px;
+    padding: 40px 35px 31px 45px;
+  }
+
+  @include max-mobile {
+    padding: 30px 30px 35px 30px;
+  }
+
+  &:nth-of-type(4n+1),
+  &:nth-of-type(4n+2) {
+    @include max-mobile {
+      min-height: 340px;
+    }
+  }
+
+  &:nth-of-type(4n+3),
+  &:nth-of-type(4n+4) {
+    @include max-mobile {
+      min-height: 325px;
+    }
+  }
+
+  &:not(:last-of-type) {
+    @include max-mobile {
+      margin-bottom: 30px;
+    }
+  }
+
+  &:nth-of-type(4n+1) > h3,
+  &:nth-of-type(4n+2) > h3 {
+    @include max-tablet {
+      margin-bottom: 9px;
+    }
+  }
+
+  &:nth-of-type(4n+3) > h3,
+  &:nth-of-type(4n+4) > h3 {
+    @include max-tablet {
+      margin-bottom: 5px;
+    }
+
+    @include max-mobile {
+      margin-bottom: 14px;
+    }
+  }
+
+  &:nth-of-type(4n+1) > svg,
+  &:nth-of-type(4n+2) > svg {
+    @include max-tablet {
+      margin-bottom: 17px;
+    }
+
+    @include max-mobile {
+      margin-bottom: 16px;
+    }
+  }
+
+  &:nth-of-type(4n+3) > svg {
+    @include max-tablet {
+      margin-bottom: 17px;
+    }
+
+    @include max-mobile {
+      margin-bottom: 18px;
+    }
+  }
+
+  &:nth-of-type(4n+4) > svg {
+    @include max-tablet {
+      margin-bottom: 13px;
+    }
+
+    @include max-mobile {
+      margin-bottom: 18px;
+    }
+  }
+
+  &:nth-of-type(3n) > svg {
+    transform: translateX(-5px);
+
+    @include max-tablet {
+      transform: none;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 5px;
+    background-color: $color-deep-sky-blue;
+  }
+
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover {
+      background-color: $color-deep-sky-blue;
+      box-shadow: inset 0 0 0 1px $color-deep-sky-blue;
+    }
+
+    &:hover > h3,
+    &:hover > p,
+    &:hover > svg {
+      color: $color-alice-blue;
+      fill: $color-alice-blue-alt;
+    }
+  }
+}
+
+.advantages svg {
+  display: block;
+  fill: $color-deep-sky-blue;
+
+  @include min-desktop {
+    margin-bottom: 22px;
+  }
+
+  @include max-mobile {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.advantages h3 {
+  margin-top: 0;
+  font-family: $ff-roboto-condensed;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 33.75px;
+  color: $color-deep-sky-blue;
+
+  @include min-desktop {
+    margin-bottom: 14px;
+  }
+
+  @include max-mobile {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+
+.advantages p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 21.6px;
+  color: $color-black-pearl;
+
+  @include max-mobile {
+    font-size: 14px;
+    line-height: 19px;
+  }
+}

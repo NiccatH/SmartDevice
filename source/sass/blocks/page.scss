@@ -1,0 +1,26 @@
+.page__header {
+  min-width: 304px;
+  background: $gradient-black-pearl;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.page__body {
+  min-width: 304px;
+  display: flex;
+  flex-direction: column;
+
+  &--fixed-position {
+    overflow: hidden;
+  }
+}
+
+.page__main {
+  flex: 1 0 auto;
+}
+
+.page__footer {
+  flex-shrink: 0;
+}

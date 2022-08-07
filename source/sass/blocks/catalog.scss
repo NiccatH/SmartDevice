@@ -1,0 +1,167 @@
+.catalog {
+  font-family: $ff-roboto-condensed;
+  background-color: $color-black-pearl;
+}
+
+.catalog__wrapper {
+  padding: 66px 0 140px 0;
+
+  @include max-desktop {
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+
+  @include max-tablet {
+    padding-top: 56px;
+    padding-bottom: 45px;
+  }
+
+  @include max-mobile {
+    padding: 47px 25px 56px 25px;
+  }
+}
+
+.catalog h2 {
+  margin-top: 0;
+  margin-bottom: 53px;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 51px;
+  color: $color-default-white;
+
+  @include max-tablet {
+    margin-bottom: 37px;
+  }
+
+  @include max-mobile {
+    padding-right: 10px;
+    margin-bottom: 29px;
+    font-size: 28px;
+    line-height: 39px;
+
+    &::after {
+      position: relative;
+      content: "Товары и услуги Smart Device";
+      font-weight: 400;
+      color: $color-default-white;
+    }
+  }
+}
+
+.catalog h2 > * {
+  @include max-mobile {
+    display: none;
+  }
+}
+
+.catalog ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 85px;
+
+  @include max-tablet {
+    display: flex;
+    flex-direction: column;
+    gap: unset;
+  }
+}
+
+.catalog li {
+  min-height: 650px;
+
+  @include max-tablet {
+    width: 100%;
+    margin: 0 auto 30px auto;
+    min-height: 250px;
+  }
+
+  @include max-mobile {
+    max-width: 470px;
+  }
+}
+
+.catalog a {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+
+  @include max-tablet {
+    min-height: 250px;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    background-color: $color-deep-sky-blue;
+    background-image: url("../img/svg/arrow.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 3px 0 0 0;
+
+    @include max-mobile {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover::after {
+      box-shadow: inset 0 0 0 2px $color-default-white;
+    }
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+}
+
+.catalog h3 {
+  position: relative;
+  padding: 47px 125px 70px 40px;
+  margin: 0;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  color: $color-default-white;
+  z-index: 1;
+
+  @include max-desktop {
+    padding-right: 40px;
+  }
+
+  @include max-tablet {
+    padding: 37px 380px 70px 45px;
+  }
+
+  @include max-mobile {
+    padding: 26px 30px 50px 30px;
+    font-size: 18px;
+  }
+}
+
+.catalog br {
+  display: none;
+
+  @include max-tablet {
+    display: block;
+  }
+}
+
+.catalog img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
