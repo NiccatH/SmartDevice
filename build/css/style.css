@@ -1558,6 +1558,11 @@ button,
 }
 
 @media (min-width: 1024px) {
+  .page__header {
+    position: fixed;
+    z-index: 2;
+  }
+
   .main-block {
     background: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), center/cover no-repeat url("../img/main-bg-desktop.jpg"), #041827;
     background: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), center/cover no-repeat url("../img/main-bg-desktop.jpg"), #041827;

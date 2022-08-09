@@ -5,6 +5,11 @@
   top: 0;
   left: 0;
   right: 0;
+
+  @include min-desktop {
+    position: fixed;
+    z-index: 2;
+  }
 }
 
 .page__body {
