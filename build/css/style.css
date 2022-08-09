@@ -391,7 +391,7 @@ template {
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url("../fonts/Robotocondensed.woff2") format("woff2"), url("../fonts/Robotocondensed.woff") format("woff");
+  src: url("../fonts/robotocondensed.woff2") format("woff2"), url("../fonts/robotocondensed.woff") format("woff");
 }
 
 @font-face {
@@ -399,7 +399,7 @@ template {
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url("../fonts/Robotocondensedbold.woff2") format("woff2"), url("../fonts/Robotocondensedbold.woff") format("woff");
+  src: url("../fonts/robotocondensedbold.woff2") format("woff2"), url("../fonts/robotocondensedbold.woff") format("woff");
 }
 
 @font-face {
@@ -407,7 +407,7 @@ template {
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: url("../fonts/Robotomedium.woff2") format("woff2"), url("../fonts/Robotomedium.woff") format("woff");
+  src: url("../fonts/robotomedium.woff2") format("woff2"), url("../fonts/robotomedium.woff") format("woff");
 }
 
 @font-face {
@@ -654,7 +654,6 @@ button,
   font-size: 25px;
   line-height: 29px;
   color: #f2f5f7;
-  margin: 0;
 }
 
 .logo__text {
