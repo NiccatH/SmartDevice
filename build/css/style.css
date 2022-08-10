@@ -619,13 +619,6 @@ button,
 }
 
 .logo {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 55px 145px;
-  grid-template-columns: 55px 145px;
-  -webkit-column-gap: 15px;
-  -moz-column-gap: 15px;
-  column-gap: 15px;
   border-radius: 3px;
 }
 
@@ -636,35 +629,6 @@ button,
 .logo--current-page {
   pointer-events: none;
   cursor: default;
-}
-
-.logo__icon {
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 2;
-  grid-row: 1 / 3;
-}
-
-.logo__title {
-  align-self: flex-end;
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 1;
-  grid-column: 2 / 3;
-  font-family: "Roboto Condensed", "Arial", sans-serif;
-  font-weight: 700;
-  font-size: 25px;
-  line-height: 29px;
-  color: #f2f5f7;
-}
-
-.logo__text {
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 1;
-  grid-column: 2 / 3;
-  font-family: "Roboto", "Arial", sans-serif;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 14px;
-  color: rgba(255, 255, 255, 0.7);
 }
 
 .page-header__wrapper {
@@ -678,6 +642,14 @@ button,
   -ms-flex-align: start;
   align-items: flex-start;
   padding: 30px 60px 35px 0;
+}
+
+.page-header__logo-icon--full {
+  display: block;
+}
+
+.page-header__logo-icon--short {
+  display: none;
 }
 
 .page-header__list {
@@ -741,7 +713,8 @@ button,
 }
 
 .social__logo {
-  margin-bottom: 32px;
+  margin-top: 2px;
+  margin-bottom: 25px;
 }
 
 .social__list {
@@ -1146,7 +1119,7 @@ button,
 
 .feedback {
   position: relative;
-  background: 0 -79px/auto no-repeat url("../../img/svg/form-decor.svg"), #00b2ff;
+  background: 0 -79px/auto no-repeat url("../img/svg/form-decor.svg"), #00b2ff;
 }
 
 .feedback__wrapper {
@@ -1293,12 +1266,12 @@ button,
 }
 
 .form__check {
-  -ms-flex-item-align: end;
-  align-self: flex-end;
   padding-left: 10px;
+  margin-top: 13px;
 }
 
 .form__check-modal {
+  margin-top: 0;
   -ms-flex-item-align: stretch;
   -ms-grid-row-align: stretch;
   align-self: stretch;
@@ -1388,7 +1361,7 @@ button,
 }
 
 .form__button-modal {
-  width: 100%;
+  max-width: 100%;
   margin-bottom: 18px;
 }
 
@@ -1466,18 +1439,8 @@ button,
 
 @media (hover: hover), screen and (min-width: 0\0) {
   .logo:hover {
-    background-color: #f2f5f7;
     -webkit-box-shadow: 0 0 0 2px #f2f5f7;
     box-shadow: 0 0 0 2px #f2f5f7;
-  }
-
-  .logo:hover p {
-    color: #041827;
-  }
-
-  .logo:hover span {
-    color: #041827;
-    opacity: 0.7;
   }
 
   .page-header__button:hover {
@@ -1575,6 +1538,10 @@ button,
 
   .advantages h3 {
     margin-bottom: 14px;
+  }
+
+  .catalog a {
+    min-height: 650px;
   }
 }
 
@@ -1695,9 +1662,9 @@ button,
   .page-footer__wrapper {
     -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
-    gap: 37px 24px;
+    gap: 30px 24px;
     padding-top: 50px;
-    padding-bottom: 61px;
+    padding-bottom: 62px;
   }
 
   .page-footer__social {
@@ -1787,7 +1754,7 @@ button,
   }
 
   .about__wrapper {
-    padding: 40px 53px 74px 46px;
+    padding: 41px 53px 75px 46px;
     -webkit-column-gap: 29px;
     -moz-column-gap: 29px;
     column-gap: 29px;
@@ -1876,6 +1843,7 @@ button,
 
   .form__check {
     padding-left: 0;
+    margin-top: 8px;
     margin-bottom: 5px;
   }
 
@@ -1899,18 +1867,12 @@ button,
     padding: 15px 35px 14px 26px;
   }
 
-  .page-header__logo {
-    display: block;
-  }
-
-  .page-header__logo-icon {
-    width: 35px;
-    height: 35px;
-  }
-
-  .page-header__logo-title,
-  .page-header__logo-text {
+  .page-header__logo-icon--full {
     display: none;
+  }
+
+  .page-header__logo-icon--short {
+    display: block;
   }
 
   .page-header__list {
@@ -1938,7 +1900,7 @@ button,
   }
 
   .social__logo {
-    margin-bottom: 15px;
+    margin-bottom: 9px;
   }
 
   .social__list {
@@ -2247,6 +2209,7 @@ button,
 
   .form__check {
     padding-left: 5px;
+    margin-top: 0;
     margin-bottom: 0;
   }
 

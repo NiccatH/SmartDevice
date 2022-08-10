@@ -49,7 +49,7 @@ const onPhoneInput = (evt) => {
       formattedInputValue += '-' + inputNumbersValue.substring(9, 11);
     }
   } else {
-    formattedInputValue = '+' + inputNumbersValue.substring(0, 16);
+    formattedInputValue = inputNumbersValue.substring(0, 16);
   }
   input.value = formattedInputValue;
 };

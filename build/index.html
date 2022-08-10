@@ -14,7 +14,6 @@
   <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-  <link rel="manifest" href="favicon/site.webmanifest">
   <link rel="preload" href="fonts/ptmono.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/robotocondensed.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/robotocondensedbold.woff2" as="font" type="font/woff2" crossorigin>
@@ -24,12 +23,13 @@
 <body class="page__body">
   <header class="page__header page-header">
     <div class="page-header__wrapper section-wrapper">
-      <a class="page-header__logo logo logo--current-page" href="#" aria-label="Сайт Смарт Девайс">
-        <svg class="page-header__logo-icon logo__icon" viewBox="0 0 55 55" width="55" height="55">
+      <a class="page-header__logo logo logo--current-page" aria-label="Сайт Смарт Девайс">
+        <svg class="page-header__logo-icon page-header__logo-icon--full logo__icon" viewBox="0 0 215 55" width="215" height="55">
           <use href="img/sprite-auto.svg#logo"></use>
         </svg>
-        <span class="page-header__logo-title logo__title">Smart Device</span>
-        <span class="page-header__logo-text logo__text">умные технологии</span>
+        <svg class="page-header__logo-icon page-header__logo-icon--short logo__icon" viewBox="0 0 35 35" width="35" height="35">
+          <use href="img/sprite-auto.svg#logo-small"></use>
+        </svg>
       </a>
       <ul class="page-header__list contacts">
         <li class="contacts__item">
@@ -260,12 +260,10 @@
     <nav class="page-footer__nav">
       <div class="page-footer__wrapper section-wrapper">
         <div class="page-footer__social social">
-          <a class="social__logo logo logo--current-page" href="#" aria-label="Сайт Смарт Девайс">
-            <svg class="logo__icon" viewBox="0 0 55 55" width="55" height="55">
+          <a class="social__logo logo logo--current-page" aria-label="Сайт Смарт Девайс">
+            <svg class="logo__icon" viewBox="0 0 215 55" width="215" height="55">
               <use href="img/sprite-auto.svg#logo"></use>
             </svg>
-            <span class="logo__title">Smart Device</span>
-            <span class="logo__text">умные технологии</span>
           </a>
           <ul class="social__list">
             <li class="social__item">
@@ -350,7 +348,7 @@
       </button>
       <div class="modal-container__form form">
         <h2>Закажите звонок</h2>
-        <p>Оставьте контакты, мы&nbsp;проконсультируем вас бесплатно в&nbsp;удобное время</p>
+        <p>Оставьте контакты, мы&nbsp;проконсультируем вас&nbsp;бесплатно в&nbsp;удобное время</p>
         <form class="form__modal-form" action="https://echo.htmlacademy.ru/" method="post">
           <div class="form__field form__field-modal">
             <label class="visually-hidden" for="user-name-modal">Имя</label>

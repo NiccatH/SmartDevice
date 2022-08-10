@@ -1,6 +1,6 @@
 .feedback {
   position: relative;
-  background: 0 -79px / auto no-repeat url("../../img/svg/form-decor.svg"), $color-deep-sky-blue;
+  background: 0 -79px / auto no-repeat url("../img/svg/form-decor.svg"), $color-deep-sky-blue;
 
   @include max-tablet {
     background-image: none;

@@ -27,14 +27,15 @@
 }
 
 .social__logo {
-  margin-bottom: 32px;
+  margin-top: 2px;
+  margin-bottom: 25px;
 
   @include max-tablet {
     margin: 0;
   }
 
   @include max-mobile {
-    margin-bottom: 15px;
+    margin-bottom: 9px;
   }
 }
 

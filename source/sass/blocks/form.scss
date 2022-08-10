@@ -97,21 +97,24 @@
 }
 
 .form__check {
-  align-self: flex-end;
   padding-left: 10px;
+  margin-top: 13px;
 
   @include max-tablet {
     padding-left: 0;
+    margin-top: 8px;
     margin-bottom: 5px;
   }
 
   @include max-mobile {
     padding-left: 5px;
+    margin-top: 0;
     margin-bottom: 0;
   }
 }
 
 .form__check-modal {
+  margin-top: 0;
   align-self: stretch;
   padding-left: 8px;
 }
@@ -213,6 +216,6 @@
 }
 
 .form__button-modal {
-  width: 100%;
+  max-width: 100%;
   margin-bottom: 18px;
 }

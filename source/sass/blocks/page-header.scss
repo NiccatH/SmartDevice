@@ -18,23 +18,19 @@
   }
 }
 
-.page-header__logo {
-  @include max-mobile {
-    display: block;
-  }
-}
+.page-header__logo-icon--full {
+  display: block;
 
-.page-header__logo-icon {
-  @include max-mobile {
-    width: 35px;
-    height: 35px;
-  }
-}
-
-.page-header__logo-title,
-.page-header__logo-text {
   @include max-mobile {
     display: none;
+  }
+}
+
+.page-header__logo-icon--short {
+  display: none;
+
+  @include max-mobile {
+    display: block;
   }
 }
 
